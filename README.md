@@ -17,3 +17,4 @@ REST API сервіс для управління каталогом компл�
 pip install -r requirements.txt
 pytest -v
 ```
+<!-- check for ignoring readme -->
