@@ -38,7 +38,7 @@ jobs:
   docker-pack-n-push:
     name: Call Docker Pack and Push
     needs: build-n-test
-    uses: ./.github/workflows/docker-pack-n-push.yml
+    uses: ./.github/workflow/docker-pack-n-push.yml
     with:
       image_name: "zhukovdaniilcs21/cicd-laboratorna-1"
       image_tag: "latest"
