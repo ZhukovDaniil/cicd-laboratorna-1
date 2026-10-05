@@ -40,7 +40,7 @@ jobs:
     needs: build-n-test
     uses: ./.github/workflows/docker-pack-n-push.yml
     with:
-      image_name: "zhukovdaniilcs21/cicd-laboratorna-1"
+      image_name: "zhukovdaniilcs21/pc-components-api"
       image_tag: "latest"
       push_to_hub: ${{ github.ref_name == 'master' }}
     secrets:
