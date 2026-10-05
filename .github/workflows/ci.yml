@@ -3,7 +3,7 @@ name: CI Web Service Pipeline
 on:
   push:
     branches:
-      - main
+      - master
       - "feature/*"
       - "bugfix/*"
     paths-ignore:
@@ -38,11 +38,11 @@ jobs:
   docker-pack-n-push:
     name: Call Docker Pack and Push
     needs: build-n-test
-    uses: ./.github/workflow/docker-pack-n-push.yml
+    uses: ./.github/workflows/docker-pack-n-push.yml
     with:
       image_name: "zhukovdaniilcs21/cicd-laboratorna-1"
       image_tag: "latest"
-      push_to_hub: ${{ github.ref_name == 'main' }}
+      push_to_hub: ${{ github.ref_name == 'master' }}
     secrets:
       docker_username: ${{ secrets.DOCKER_USERNAME }}
       docker_password: ${{ secrets.DOCKER_PASSWORD }}
